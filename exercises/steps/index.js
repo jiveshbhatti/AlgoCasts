@@ -17,6 +17,55 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// function steps(n) {
+
+// let toPrint = '#'
+
+// let newStr = ''
+
+// let arr = []
+
+// let timesToPrint = arr.length 
+
+// for(let i=0; i<n; i++){
+    
+    
+
+//     if((n-1) === i){
+
+//         // console.log(newStr = lastPrint.repeat(n) )
+//         arr.push('#')
+//     }else{
+//      arr.push(i)
+
+        
+//     }
+// }
+
+// console.log(arr.length * toPrint)
+
+// // function print (t){
+
+// //     for(let i=0; i<t; i++){
+
+// //         console.log(arr.le)
+
+// //     }
+
+
+// }
+
+// let lastPrint = toPrint.repeat(arr.length) + ' '
+// console.log(arr)
+// console.log(lastPrint)
+
+const steps = n => {
+
+    for (let i = 1; i <= n; i++) console.log("#".repeat(i) + " ".repeat(n - i));
+  
+  }
+
+steps(15)
 
 module.exports = steps;
+
