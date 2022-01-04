@@ -59,13 +59,37 @@
 // console.log(arr)
 // console.log(lastPrint)
 
-const steps = n => {
+// const steps = n => {
 
-    for (let i = 1; i <= n; i++) console.log("#".repeat(i) + " ".repeat(n - i));
+//     for (let i = 1; i <= n; i++) console.log("#".repeat(i) + " ".repeat(n - i));
   
-  }
+//   }
 
-steps(15)
+// steps(15)
+
+
+
+//recursive solution
+
+const steps = (n, x = 1) =>  {
+
+    if(n < x){
+        return;
+    }else{
+        
+    console.log('#'.repeat(x) + ' '.repeat(n-x))
+
+   
+   steps(n, x+1)
+    
+    }
+
+  
+
+}
+
+steps(4)
 
 module.exports = steps;
+
 
