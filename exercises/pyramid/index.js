@@ -14,6 +14,42 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+
+
+    let a = 1
+    let b = n
+    let d = '#'
+
+
+    for(i=0; i<n; i++){
+    
+    b = b - 1
+    
+    console.log(' '.repeat(b) + d.repeat(a) + ' '.repeat(b))
+    
+    a += 2
+
+
+
+
+
+    }
+
+  
+}
+
+pyramid(5)
+
+
+// function pyramid(n) {
+//     let j = n;
+//     let s = 1;
+//     for (let i = 0; i < n; i++) {
+//     j = j - 1;
+//     console.log('-'.repeat(j) + "#".repeat(s) + '-'.repeat(j))
+//     s += 2
+//     }
+//    }
 
 module.exports = pyramid;
