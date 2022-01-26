@@ -8,23 +8,21 @@
 // Example:
 //   fib(4) === 3
 
+
+
+//using recursion
+
 function fib(n) {
-let result = [0,1]
+    if (n < 2){
+        return n 
+    }
 
-for(let i = 2; i <= n; i++){
-const a = result[i -1]
-const b = result[i -2]
-
-console.log(a,b)
-
-result.push(a+b)
-
-}
-console.log(result)
-console.log(result[result.length-1], 'final ')
+    return fib(n -1 ) + fib(n - 2)
 
 }
 
 
 fib(4)
 module.exports = fib;
+
+
