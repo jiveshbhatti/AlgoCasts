@@ -1,20 +1,20 @@
-arrVal = (val, find) =>{
+function repeat (array){
 
-    let start = 0;
-    let end = val.length -1;
-    let middle = Math.floor((start +end)/2)
+    let obj = {}
 
-    while(val[middle]!==find && start <= end){
-        if(find < val[middle]){
-            end = middle -1 
-        }else{
-            start = middle +1
-        }
-        middle = Math.floor((start+end)/2)
-    }
-    return middle
-    
+   for (let index = 0; index < array.length; index++) {
+   console.log(array[index])
+
+   if(obj[array[index]] !== undefined){
+    console.log('dup found', array[index])
+    break
+   }else{
+    obj[array[index]] = array[index]
+   }
+   }
+
+    console.log(obj)
 }
 
-arrVal([2,55,33, 66,77,88], 33)
 
+repeat([2,5,1,2,4,3])
