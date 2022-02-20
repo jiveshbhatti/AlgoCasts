@@ -1,20 +1,43 @@
-function repeat (array){
+// 10 --- 16 --- 20
 
-    let obj = {}
-
-   for (let index = 0; index < array.length; index++) {
-   console.log(array[index])
-
-   if(obj[array[index]] !== undefined){
-    console.log('dup found', array[index])
-    break
-   }else{
-    obj[array[index]] = array[index]
-   }
-   }
-
-    console.log(obj)
+//creating a seperate class of newNode so we're using DRY principles.
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
 }
 
+//!linked List class
+class linkedList {
+  constructor(value) {
+    this.head = {
+      value: value,
+      next: null,
+    };
+    this.tail = this.head;
+    this.length = 1;
+  }
 
-repeat([2,5,1,2,4,3])
+  append(value) {
+    const newNode = new Node(value);
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+    return this;
+  }
+
+  prepend(value) {
+    const newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+  }
+}
+
+const myLinkedList = new linkedList(10);
+
+myLinkedList.append(5);
+myLinkedList.append(15);
+myLinkedList.prepend(2);
+console.log(myLinkedList);
